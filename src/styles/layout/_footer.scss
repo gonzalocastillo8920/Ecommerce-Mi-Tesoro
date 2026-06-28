@@ -1,0 +1,19 @@
+
+@use "../utils/variables" as *;
+
+.footer__container {
+    background: $secondary-color;
+    bottom: -$footer-height;
+    color: $dark-font-color;
+    height: $footer-height;
+    left: 0;
+    padding: 0.5rem;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    .footer__copy {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}

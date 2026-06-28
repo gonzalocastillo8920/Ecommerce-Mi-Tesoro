@@ -1,0 +1,33 @@
+
+@use "../utils/variables" as *;
+
+.card__product-container {
+    background-color: $secondary-color;
+    border: 1px solid $secondary-dark-color;
+    border-radius: 0.5rem; //8px
+    color: $light-font-color;
+    .card__product-image {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 0.5rem; //8px
+    }
+    .card__product-content {
+        padding: 0 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .card__product-description {
+            font-size: 14px;
+        };
+        .card__product-amount {
+            font-weight: 600;
+        };
+        .card__product-button {
+            display: flex;
+            justify-content: end;
+        }
+    }
+    &:hover {
+        background-color: $secondary-light-color;
+    }
+}

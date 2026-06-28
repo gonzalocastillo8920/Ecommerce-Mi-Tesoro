@@ -1,0 +1,20 @@
+@use "../utils/variables" as *;
+
+.banner {
+    &-success {
+        background-color: lighten($success-color, 60%);
+        border: 1px solid $success-color;
+        color: $success-color;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+    &-error {
+        background-color: lighten($error-color, 30%);
+        border: 1px solid $error-color;
+        color: $error-color;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+}

@@ -1,0 +1,68 @@
+
+@use "../utils/variables" as *;
+
+.btn {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 1px solid #eee;
+    &__primary {
+        &-solid {
+            background-color: $primary-dark-color;
+            color: $primary-light-color;
+            &:hover {
+                background-color: $primary-color;
+                color: $primary-dark-color;
+            }
+            &:disabled {
+                background-color: $primary-light-color;
+                color: $primary-dark-color;
+                cursor: not-allowed;
+            }
+        }
+        &-outline {
+            background-color: transparent;
+            color: $primary-dark-color;
+            border: 2px solid $primary-dark-color;
+            &:hover {
+                background-color: $primary-dark-color;
+                color: $primary-color;
+            }
+            &:disabled {
+                background-color: $primary-light-color;
+                color: $primary-dark-color;
+                cursor: not-allowed;
+            }
+        }
+    }
+    &__secondary {
+        &-solid {
+            background-color: $secondary-dark-color;
+            color: $secondary-light-color;
+            &:hover {
+                background-color: $secondary-color;
+                color: $secondary-dark-color;
+            }
+            &:disabled {
+                background-color: $secondary-light-color;
+                color: $secondary-dark-color;
+                cursor: not-allowed;
+            }
+        }
+        &-outline {
+            background-color: transparent;
+            color: $secondary-dark-color;
+            border: 2px solid $secondary-dark-color;
+            &:hover {
+                background-color: $secondary-dark-color;
+                color: $secondary-color;
+            }
+            &:disabled {
+                background-color: $secondary-light-color;
+                color: $secondary-dark-color;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

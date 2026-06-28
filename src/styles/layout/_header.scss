@@ -1,0 +1,138 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+.header__container {
+    background-color: $primary-color;
+    color: $light-font-color;
+    min-height: $header-height;
+    left: 0;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+
+    .header__button-burger-menu {
+        display: none;
+        color: $light-font-color;
+        @include to-breakpoint (md) {
+            display: block;
+        }
+    }
+
+    .header__content {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .header__navigation {
+        @include to-breakpoint (md) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+    
+            li {
+                list-style: none;
+    
+                .header__navigation-link:hover {
+                    cursor: pointer;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .header__searcher-form {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+
+        .header__searcher-imput {
+            background-color: $bgc;
+            border: 1px solid $primary-light-color;
+            border-radius: 0.75rem;
+            padding: 0.5rem 1rem;
+        }
+
+        img {
+            height: 20px;
+        }
+    }
+
+    .header__categories {
+        background-color: $primary-dark-color;
+        color: $light-font-color;
+        padding: 0.5rem;
+
+        ul {
+            gap: 2rem;
+
+            li {
+                letter-spacing: 4px;
+            }
+        }
+
+        @include to-breakpoint (md) {
+            display: none;
+        }
+    }
+}
+
+.header__menu {
+    background-color: $secondary-dark-color;
+    min-width: 35vw;
+    height: calc(100vh + 1rem - $header-height);
+    left: 0;
+    top: $header-height;
+    position: fixed;
+    z-index: 2;
+    padding-top: 2rem;
+    
+    .header__searcher-form {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+        padding: 0 1.5rem;
+
+        .header__searcher-imput {
+            background-color: $bgc;
+            border: 1px solid $secondary-dark-color;
+            border-radius: 0.75rem;
+            padding: 0.5rem 1rem;
+        }
+
+        img {
+            height: 20px;
+        }
+    }
+
+    .header__content {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .header__navigation ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+        padding: 1.5rem;
+
+        li {
+            list-style: none;
+            color: $light-font-color;
+
+            .header__navigation-link:hover {
+                cursor: pointer;
+                color: $primary-light-color;
+            }
+        }
+    }
+}

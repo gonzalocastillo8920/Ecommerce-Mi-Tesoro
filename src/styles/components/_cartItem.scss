@@ -1,0 +1,49 @@
+
+@use "../utils/variables" as *;
+
+.cartItem__container {
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px 4px rgba(44, 42, 45, 0.75);
+    padding: .5rem;
+    margin: 1rem 0;
+    background-color: $secondary-light-color;
+
+    .cartItem__image {
+        width: 75px;
+        height: 75px;
+        border-radius: 4px;
+    }
+    .cartItem__price{
+        font-weight: 600;
+    }
+}
+
+.cartItem__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart__title{
+    display: flex;
+    justify-content: center;
+    color: $bgc;
+}
+
+.cart__total{
+    display: flex;
+    color: $bgc;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    &__checkout {
+        color: $dark-font-color;
+        padding-top: 2rem;
+    }
+}
+
+.cart__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

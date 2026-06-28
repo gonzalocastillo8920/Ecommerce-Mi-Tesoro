@@ -1,0 +1,30 @@
+
+@use "../utils/mixins" as *;
+
+.container {
+    margin: 0 auto;
+    @include create-container-width ();
+}
+
+.container__page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__us {
+    margin: 0;
+    @include to-breakpoint (sm) {
+        margin: 1rem;
+    }
+}
+.container__us-img {
+    aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container__us-text {
+    font-size: 1.25rem;
+    text-align: justify;
+    line-height: 1.75rem;
+}
